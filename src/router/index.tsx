@@ -7,16 +7,19 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: <App />,
-
       children: [
         {
-          path: "demo",
-          element: lazyLoad(() => import("@/views/Demo")),
+          path: "auth/login",
+          element: lazyLoad(() => import("@/views/auth/login")),
+        },
+        {
+          path: "auth/register",
+          element: lazyLoad(() => import("@/views/auth/register")),
         },
       ],
     },
     {
-      path: "/404",
+      path: "404",
       element: <div>404</div>,
     },
     {
@@ -25,7 +28,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: import.meta.env.VITE_BASE_UR,
+    basename: import.meta.env.VITE_ROUTE_BASE,
   }
 );
 

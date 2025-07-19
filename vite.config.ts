@@ -6,7 +6,7 @@ import path from 'path';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
   return {
-    base: env.VITE_PUBLIC_PATH,
+    base: env.VITE_PUBLIC_BASE,
     build: {
       outDir: 'html',
     },
