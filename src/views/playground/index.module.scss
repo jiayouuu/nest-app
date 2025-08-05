@@ -1,0 +1,29 @@
+.top-border,
+.bottom-border,
+.right-border,
+.left-border {
+  position: absolute;
+  background-color: pink;
+  cursor: ew-resize;
+}
+.right-border,
+.left-border {
+  cursor: ew-resize;
+}
+.top-border,
+.bottom-border {
+  cursor: ns-resize;
+}
+.left-top-angle,
+.right-top-angle,
+.left-bottom-angle,
+.right-bottom-angle {
+  position: absolute;
+  background-color: skyblue;
+  cursor: move;
+  z-index: 999;
+}
+.content {
+  position: absolute;
+  cursor: grab;
+}

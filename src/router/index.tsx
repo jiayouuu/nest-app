@@ -9,6 +9,10 @@ const router = createBrowserRouter(
       element: <App />,
       children: [
         {
+          path: "",
+          element: lazyLoad(() => import("@/views/playground")),
+        },
+        {
           path: "auth/login",
           element: lazyLoad(() => import("@/views/auth/login")),
         },
